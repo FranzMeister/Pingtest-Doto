@@ -1,3 +1,5 @@
+# Doto-Pingtest
+
 An idea for the looks of the Doto Pingtest would look like.
 
 
@@ -6,7 +8,7 @@ An idea for the looks of the Doto Pingtest would look like.
 
 
 ---
-# Midnight
+* Theme: Midnight
 
 Open source content for Midnight theme. Theme was first designed / developed for GitHub Pages and is availalbe for download, forking and using anywhere else on the web. Like the theme share it with the twitterverse.
 
