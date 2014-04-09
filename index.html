@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Universal Ping Tester</title>
-    <link rel="stylesheet" href="stylesheets/lib/styles.css">
-    <link rel="stylesheet" href="stylesheets/lib/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/lib/respond.js"></script>
+    <link rel="stylesheet" href="stylesheets/libs/styles.css">
+    <link rel="stylesheet" href="stylesheets/libs/pygment_trac.css">
+    <script src="javascript/libs/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/lib/ie.css">
+    <link rel="stylesheet" href="stylesheets/libs/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -64,6 +63,14 @@
         </center>
 	  </section>
     </div>
+
+    <script src="javascript/libs/jquery-1.10.2.js"></script>
+    <script src="javascript/libs/handlebars-1.1.2.js"></script>
+    <script src="javascript/libs/ember-1.5.0.js"></script>
+    <script src="javascript/app.js"></script>
+    <!-- to activate the test runner, add the "?test" query string parameter -->
+    <script src="tests/runner.js"></script>
+
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
   </body>
 </html>
