@@ -71,18 +71,31 @@
     </script>
 
     <script type="text/x-handlebars" id="imprint">
-        <!-- TODO: some stuff required by german law -->
-        <h1>Impressum</h1>
-        <p>
-            Something something bitte nicht verklagen.
-        </p>
+      <!-- TODO: some stuff required by german law -->
+      <h1>Impressum</h1>
+      <p>
+        Something something bitte nicht verklagen.
+      </p>
     </script>
 
     <script type="text/x-handlebars" id="dota2">
-        <h1>Dota2</h1>
-        <p>
-            Ping business goes here.
-        </p>
+      <h1>Dota2</h1>
+      <!-- TODO -->
+      <span>
+        Ping requests to send. More take longer but are more precise:
+        <button>1x</button>
+        <button>3x</button>
+        <button>10x</button>
+      </span>
+
+      <table>
+        {{#each}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{stateText}}</td>
+        <tr>
+        {{/each}}
+      </table>
     </script>
 
     <script src="javascript/libs/jquery-1.10.2.js"></script>

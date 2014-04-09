@@ -4,19 +4,24 @@ window.App = Ember.Application.create({
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
-App.HomeController = Em.Controller.extend();
+// this is created by default
+//App.HomeController = Em.Controller.extend();
+// this is redundant too I think if not customized further
 App.HomeView = Em.View.extend({
     templateName: 'home'
 });
 
-App.ImprintController = Em.Controller.extend();
 App.ImprintView = Em.View.extend({
     templateName: 'imprint'
 });
 
-App.Dota2Controller = Em.Controller.extend();
 App.Dota2View = Em.View.extend({
     templateName: 'dota2'
+});
+App.Dota2Route = Ember.Route.extend({
+  model: function() {
+    return this.store.find('server');
+  }
 });
 
 App.Router.map(function() {
