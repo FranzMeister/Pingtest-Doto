@@ -1,10 +1,13 @@
 App.Server = DS.Model.extend({
   name: DS.attr('string'),
   ip: DS.attr('string'),
+  ping_min: DS.attr('int'),
+  ping_max: DS.attr('int'),
   isQueried: DS.attr('boolean'),
   isFinished: DS.attr('boolean')
 });
 
+// this model and fixtures are not final, but should do as a first approximation
 App.Server.FIXTURES = [
     //"South East Asia, Singapore",
     {

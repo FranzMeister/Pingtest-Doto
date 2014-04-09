@@ -22,7 +22,8 @@
     <script type="text/x-handlebars">
       <div id="header">
         <nav>
-          <li class="fork"><a href="#">Dota 2 </a></li>
+          <li class="fork">{{#link-to 'home'}}UP-ING-STER{{/link-to}}</li> <!-- so sorry -->
+          <li class="fork">{{#link-to 'dota2'}}DotA 2{{/link-to}}</li>
           <li class="downloads"><a href="http://pastebin.com/jZdDLiaf">Windows</a></li>
           <li class="downloads"><a href="https://play.google.com/store/apps/details?id=net.th4t.dotapingtester">Android</a></li>
           <li class="title">DOWNLOADS</li>
@@ -74,6 +75,13 @@
         <h1>Impressum</h1>
         <p>
             Something something bitte nicht verklagen.
+        </p>
+    </script>
+
+    <script type="text/x-handlebars" id="dota2">
+        <h1>Dota2</h1>
+        <p>
+            Ping business goes here.
         </p>
     </script>
 
