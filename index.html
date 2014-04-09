@@ -38,7 +38,7 @@
           <center>
           <span class="credits left">
             Original Theme by <a href="https://github.com/mattgraham">mattgraham</a>. <br>
-            Copyright © 2014 dotaping.net or something. <a href="TODO">Imprint</a>. <br>
+            Copyright © 2014 dotaping.net or something. {{#link-to 'imprint'}}Imprint{{/link-to}}</a>. <br>
             Dota 2 is a registered trademark of Valve Corporation. <br>
           </span>
           </center>
@@ -46,7 +46,7 @@
       </div>
     </script>
 
-    <script type="text/x-handlebars" id="index">
+    <script type="text/x-handlebars" id="home">
       <div id="title">
         <h1>Universal Ping Tester</h1>
         <p>Is it just me or is it the servers again?</p>
@@ -67,6 +67,14 @@
         So by doing a ping test you will measure how long it takes (in milliseconds) for a data package to be sent from your
         connection to the receiving end. The less delay you have the better is your ping!
       </p>
+    </script>
+
+    <script type="text/x-handlebars" id="imprint">
+        <!-- TODO: some stuff required by german law -->
+        <h1>Impressum</h1>
+        <p>
+            Something something bitte nicht verklagen.
+        </p>
     </script>
 
     <script src="javascript/libs/jquery-1.10.2.js"></script>
