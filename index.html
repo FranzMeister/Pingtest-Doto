@@ -22,7 +22,7 @@
     <script type="text/x-handlebars">
       <div id="header">
         <nav>
-          <li class="fork">{{#link-to 'home'}}UP-ING-STER{{/link-to}}</li> <!-- so sorry -->
+          <li class="fork">{{#link-to 'home'}}UP-ING-STER{{/link-to}}</li> <!-- so sorry --> <!-- what does it even mean? -->
           <li class="fork">{{#link-to 'dota2'}}DotA 2{{/link-to}}</li>
           <li class="downloads"><a href="http://pastebin.com/jZdDLiaf">Windows</a></li>
           <li class="downloads"><a href="https://play.google.com/store/apps/details?id=net.th4t.dotapingtester">Android</a></li>
@@ -49,12 +49,12 @@
 
     <script type="text/x-handlebars" id="home">
       <div id="title">
-        <h1>Universal Ping Tester</h1>
+        <h1>Dota 2 Ping Tester</h1>
         <p>Is it just me or is it the servers again?</p>
       </div>
 
       <p><img src="http://th03.deviantart.net/fs71/PRE/i/2014/096/c/9/you_can_t_hide_from_the_tide__by_hyrca-d7d91bo.png" alt="You can run but you cannot tide! - Art by Hycra http://hyrca.deviantart.com/"></p>
-      <h1>Welcome to Universal Ping Tester</h1>
+      <h1>Welcome to Dota 2 Ping Tester</h1>
       <p>This little site allows you to check the latency of your favourite game!</p>
       <h2>What is a ping tester and how does it benefit me?</h2>
       <p>
@@ -67,17 +67,39 @@
 
         So by doing a ping test you will measure how long it takes (in milliseconds) for a data package to be sent from your
         connection to the receiving end. The less delay you have the better is your ping!
-      </p>
+		<br><br>
+		For more information check out the FAQ . <!-- TODO: add a little FAQ so people know what this is all about -->
+		<!-- How is it that I cannot add a second text/handlebar? I've tried it but when I try to link to to the 'faq' handlebar the site suddenly becomes blank? Did I miss something crucial? -->
+		<!-- Ohh...by instepting everything further more I saw the application.js how stupid of me to ignore that crucial file and I should really turn off the sync thing don't like it that it's syncing everything I test, should maybe put it in a experimentation folder before committing. Sorry about that. -->
+	  </p>
     </script>
 
     <script type="text/x-handlebars" id="imprint">
       <!-- TODO: some stuff required by german law -->
+	  <!-- I'd suggest changing the name to 'Legal Notice' so people would understand it better  -->
       <h1>Impressum</h1>
       <p>
         Something something bitte nicht verklagen.
       </p>
+	  <p>
+	  	<h3>Disclaimers</h3>
+			We disclaim any responsibility for the deletion, failure to store, mis-delivery, or untimely delivery of any information or material. We disclaim any responsibility for any harm resulting from downloading or accessing any information or material on the Internet using search results from our sites. We disclaim any responsibility for, and if you subscribe to one of our fee-based services you will not be entitled to a refund as a result of, any service outages that are caused by our maintenance on the servers or the technology that underlies our sites, failures of our service providers (including telecommunications, hosting and power providers) computer viruses, natural disasters or other destruction or damage of our facilities, an act of nature, war, civil disturbance or other cause beyond our reasonable control.
+		<br><br>
+			WE DO NOT WARRANT THAT OUR SITES WILL BE UNINTERRUPTED OR ERROR-FREE. IN ADDITION, WE DO NOT MAKE ANY WARRANTY AS TO THE CONTENT ON OUR SITES. OUR SITES AND THEIR CONTENT ARE DISTRIBUTED ON AN “AS IS, AS AVAILABLE” BASIS. ANY MATERIAL THAT YOU DOWNLOAD OR OTHERWISE OBTAIN THROUGH OUR SITES IS DONE AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY POTENTIAL DAMAGES TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM YOUR DOWNLOAD OF ANY SUCH MATERIAL. NEITHER WE NOR ANY OF OUR PARTNERS MAKES ANY WARRANTY THAT (i) OUR SITES WILL MEET YOUR REQUIREMENTS, (ii) OUR SITES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, (iii) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF OUR SITES WILL BE ACCURATE OR RELIABLE, (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL THAT YOU PURCHASE OR OBTAIN THROUGH OUR SITES WILL MEET YOUR EXPECTATIONS, AND (V) ANY ERRORS WILL BE CORRECTED. NEITHER WE NOR ANY OF OUR PARTNERS MAKES ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO OUR SITES, ANY CONTENT OR ANY OUR SERVICES, TOOLS, PRODUCTS OR PROPERTIES. YOU EXPRESSLY AGREE THAT YOU WILL ASSUME THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF OUR SITES AND THE ACCURACY OR COMPLETENESS OF ITS CONTENT.
+	  </p>
+	  	<br>
+	  <p>Dota 2 is a registered trademark of Valve Corporation. This site is not affiliated with Valve Corporation. All game images and names are property of Valve Corporation.
+	  </p>
+	  	<br>
     </script>
 
+	<script type="text/x-handlebars" id="faq">
+	  <h1>FAQ</h1>
+	  <p>
+	  	something about questions and answers...
+	  </p>
+	</script>
+    
     <script type="text/x-handlebars" id="dota2">
       <h1>Dota2</h1>
       <!-- TODO -->
