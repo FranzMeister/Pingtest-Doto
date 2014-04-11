@@ -23,64 +23,68 @@ App.Server = DS.Model.extend({
 App.Server.FIXTURES = [
     //"South East Asia, Singapore",
     {
-        id: 1,
+        id: 10,
         name: "(SEA) Singapore",
         ip: "103.28.54.1"
-        //"(SEA) Singapore", "103.10.124.1"
+    },
+    {
+        id: 11,
+        name: "(SEA) Singapore",
+        ip: "103.10.124.1"
     },
     //"Europe",
     {
-        id: 2,
+        id: 20,
         name: "(EU West) Luxembourg",
         ip: "146.66.152.1"
     },
     {
-        id: 3,
+        id: 30,
         name: "(EU East) Vienna",
         ip: "146.66.155.1"
     },
     //"United States",
     {
-        id: 4,
+        id: 40,
         name: "(US West) Washington",
         ip: "192.69.96.1"
     },
     {
-        id: 5,
+        id: 50,
         name: "(US East) Sterling",
         ip: "208.78.164.1"
     },
     //"Australia",
     {
-        id: 6,
+        id: 60,
         name: "(AU) Sydney",
         ip: "103.10.125.1"
     },
     //"Russia",
     {
-        id: 7,
+        id: 70,
         name: "(SW) Stockholm",
         ip: "146.66.156.1"
     },
     //"South America",
     {
-        id: 8,
+        id: 80,
         name: "(BR)",
         ip: "209.197.29.1"
     },
     {
-        id: 9,
+        id: 90,
         name: "(BR)",
         ip: "209.197.25.1"
     },
     //"South Africa",
     {
-        id: 10,
+        id: 100,
         name: "(SA) Cape Town",
         ip: "197.80.200.1"
     },
     {
-        id: 11,
+        id: 110,
         name: "(SA) Cape Town",
         ip: "196.38.180.1"
     }

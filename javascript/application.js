@@ -32,5 +32,5 @@ App.Router.map(function() {
     this.route("home", { path: "/" });
     this.route("dota2", { path: "/dota2" });
     this.route("imprint", { path: "/imprint" });
-    this.route("faq", { path: "/faq")}; //still thinking if it should be an About or an FAQ. In an FAQ we can add more stuff than just what it is about.
+    this.route("faq", { path: "/faq"}); //still thinking if it should be an About or an FAQ. In an FAQ we can add more stuff than just what it is about.
 });
