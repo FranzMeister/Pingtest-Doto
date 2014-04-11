@@ -11,7 +11,7 @@ App.Server = DS.Model.extend({
         return "???";
     } else if (this.get('isQueried') && !this.get('isFinished')) {
         return "PENDING";
-    } else if (this.get('isQueried') && this.get('isFinished')) {
+    } else if (this.get('isFinished')) {
         return this.get('pingMin') + " - " + this.get('pingMax');
     }
     return "u wot m8?";

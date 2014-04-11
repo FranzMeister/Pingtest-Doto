@@ -2,6 +2,12 @@ window.App = Ember.Application.create({
     LOG_TRANSITIONS: true
 });
 
+function randomRange(min, max) {
+  var range = (max-min) + 1;
+  var rand = Math.floor( Math.random()*range );
+  return min+rand;
+}
+
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 // this is created by default
@@ -25,6 +31,30 @@ App.Dota2View = Em.View.extend({
 App.Dota2Route = Ember.Route.extend({
   model: function() {
     return this.store.find('server');
+  }
+});
+App.Dota2Controller = Ember.ArrayController.extend({
+  //see http://emberjs.com/guides/controllers/representing-multiple-models-with-arraycontroller/
+  actions: {
+    doPing: function(times){
+      console.log("I will ping all servers " + times + " times.");
+
+      this.get("content").forEach(function(serverItem){
+        serverItem.set("isFinished", false);
+        serverItem.set("isQueried", true);
+
+        // lies lies lies
+        setTimeout(function() {
+          // more lies
+          var pingMin = randomRange(10, 200);
+          var pingMax = randomRange(pingMin, pingMin + randomRange(10, 100));
+
+          serverItem.set("pingMin", pingMin);
+          serverItem.set("pingMax", pingMax);
+          serverItem.set("isFinished", true);
+        }, randomRange(1000, 3000));
+      });
+    }
   }
 });
 
