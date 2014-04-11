@@ -94,22 +94,24 @@
 	  <p>something about questions and answers...</p>
 	<h3>What does this website do?</h3>
 	  <p>This website allows you to ping the Dota 2 servers from your browser without ever touching the command prompt or terminal. But if you want you can always download the .bat file for easier access. th4t also wrote an Android app that does the same thing! But on an Android platform. How cool is that? The link to the app is above.</p>
-	
+
 	<h3>Yadada</h3>
 	  <p>Yadadadadada</p>
 	</script>
-    
+
     <script type="text/x-handlebars" id="dota2">
       <h1>Dota 2</h1>
       <table>
+        <tbody>
         {{#each}}
         <tr>
           <td>{{name}}</td>
           <td>{{stateText}}</td>
-        <tr>
+        </tr>
         {{/each}}
+        </tbody>
       </table>
-            <!-- TODO -->
+
       <span>
         <center>
           Ping requests to send. More take longer but are more precise: <br><br>
