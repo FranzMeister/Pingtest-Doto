@@ -1,5 +1,6 @@
 App.Server = DS.Model.extend({
   name: DS.attr('string'),
+  game: DS.attr('string'), //dota2 for example
   ip: DS.attr('string'),
   pingMin: DS.attr('int'),
   pingMax: DS.attr('int'),
@@ -20,72 +21,70 @@ App.Server = DS.Model.extend({
 });
 
 // this model and fixtures are not final, but should do as a first approximation
-App.Server.FIXTURES = [
+dota2servers = [
     //"South East Asia, Singapore",
     {
-        id: 10,
         name: "(SEA) Singapore",
         ip: "103.28.54.1"
     },
     {
-        id: 11,
         name: "(SEA) Singapore",
         ip: "103.10.124.1"
     },
     //"Europe",
     {
-        id: 20,
         name: "(EU West) Luxembourg",
         ip: "146.66.152.1"
     },
     {
-        id: 30,
         name: "(EU East) Vienna",
         ip: "146.66.155.1"
     },
     //"United States",
     {
-        id: 40,
         name: "(US West) Washington",
         ip: "192.69.96.1"
     },
     {
-        id: 50,
         name: "(US East) Sterling",
         ip: "208.78.164.1"
     },
     //"Australia",
     {
-        id: 60,
         name: "(AU) Sydney",
         ip: "103.10.125.1"
     },
     //"Russia",
     {
-        id: 70,
         name: "(SW) Stockholm",
         ip: "146.66.156.1"
     },
     //"South America",
     {
-        id: 80,
         name: "(BR)",
         ip: "209.197.29.1"
     },
     {
-        id: 90,
         name: "(BR)",
         ip: "209.197.25.1"
     },
     //"South Africa",
     {
-        id: 100,
         name: "(SA) Cape Town",
         ip: "197.80.200.1"
     },
     {
-        id: 110,
         name: "(SA) Cape Town",
         ip: "196.38.180.1"
     }
 ]
+
+function processServerEntries(serverArray) {
+    for (var i = 0; i < serverArray.length; i++) {
+        serverArray[i].id = i+1;
+        serverArray[i].game = "dota2";
+    }
+    return serverArray
+}
+
+App.Server.FIXTURES = processServerEntries(dota2servers)
