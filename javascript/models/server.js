@@ -79,6 +79,18 @@ dota2servers = [
     }
 ]
 
+otherServers = [
+    //"South East Asia, Singapore",
+    {
+        name: "Reddit",
+        ip: "reddit.com"
+    },
+    {
+        name: "Google",
+        ip: "google.com"
+    },
+]
+
 function processServerEntries(serverArray) {
     for (var i = 0; i < serverArray.length; i++) {
         serverArray[i].id = i+1;
@@ -88,3 +100,4 @@ function processServerEntries(serverArray) {
 }
 
 App.Server.FIXTURES = processServerEntries(dota2servers)
+//App.Server.FIXTURES = processServerEntries(otherServers)

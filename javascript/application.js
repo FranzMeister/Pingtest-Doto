@@ -25,12 +25,26 @@ App.FaqView = Em.View.extend({
     templateName: 'faq'
 });
 
+//look at http://stackoverflow.com/questions/4282151/is-it-possible-to-ping-a-server-from-javascript
+function ping(ip, resolve, reject) {
+    var TIMEOUT = 1500;
+
+    this.img = new Image();
+    var start = new Date().getTime();
+    this.img.onload = function() { resolve((new Date().getTime()) - start); }; //ms all
+    this.img.onerror = function() { resolve((new Date().getTime()) - start); };
+
+    var request_url = "http://" + ip + "/?cachebreaker="+(new Date().getTime())+randomRange(1,9999);
+    this.img.src = request_url;
+    this.timer = setTimeout(function() { resolve(TIMEOUT);}, TIMEOUT); //TODO? reject?
+}
+
 App.Dota2View = Em.View.extend({
     templateName: 'dota2'
 });
 App.Dota2Route = Ember.Route.extend({
   model: function() {
-    return this.store.find('server');
+    return this.store.find('server'); //.filterProperty('game', "dota2"); //or something like this somewhere
   }
 });
 App.Dota2Controller = Ember.ArrayController.extend({
@@ -43,16 +57,23 @@ App.Dota2Controller = Ember.ArrayController.extend({
         serverItem.set("isFinished", false);
         serverItem.set("isQueried", true);
 
-        // lies lies lies
-        setTimeout(function() {
-          // more lies
-          var pingMin = randomRange(10, 200);
-          var pingMax = randomRange(pingMin, pingMin + randomRange(10, 100));
+        var promises = []
+        for (var i = 0; i < times; i ++) {
+            var promise = new Promise(function(resolve, reject) {
+                ping(serverItem.get("ip"), resolve, reject);
+            });
 
-          serverItem.set("pingMin", pingMin);
-          serverItem.set("pingMax", pingMax);
-          serverItem.set("isFinished", true);
-        }, randomRange(1000, 3000));
+            promises.push(promise)
+        }
+
+        Promise.all(promises).then(function(values) {
+            var sum = _.reduce(values, function(memo, num){ return memo + num; }, 0);
+            var avg = sum/values.length;
+
+            serverItem.set("pingMin", _.min(values));
+            serverItem.set("pingMax", _.max(values));
+            serverItem.set("isFinished", true);
+        });
       });
     }
   }
